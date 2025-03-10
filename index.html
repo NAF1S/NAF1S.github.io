@@ -2,25 +2,204 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Home page</title>
-    <link rel = "stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lokman Sharif - Portfolio</title>
+  <style>
+    /* Embedded CSS */
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    
+    .container {
+      width: 80%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    header {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 40px 0;
+      margin-bottom: 30px;
+    }
+    
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      font-weight: normal;
+    }
+    
+    section {
+      background-color: white;
+      border-radius: 5px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    h2 {
+      color: #2c3e50;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .skill-tag {
+      background-color: #3498db;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 3px;
+      font-size: 0.9rem;
+    }
+    
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    
+    .project-card {
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      transition: transform 0.3s ease;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    
+    a {
+      color: #3498db;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    
+    a:hover {
+      color: #2980b9;
+      text-decoration: underline;
+    }
+    
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
 </head>
 <body>
-<h1>
-    This is my page
-</h1>
-<p>
-    Hello every one,I am lokman sharif,currently doing my Undergrade at University of Dhaka .
-    I build this webpage as a Hobby for myself.I will keep updating this page in future.
-</p>
-<h2>
-    Personal Information:
-</h2>
-<ul>
-    <p>
-        <a href="https://github.com/NAF1S" target="_blank"> Github</a>
-    </p>
-    Mail : <b>lokmansharif000@gmail.com</b>
-</ul>
+  <header>
+    <div class="container">
+      <h1>Lokman Sharif</h1>
+      <p class="subtitle">Undergraduate Student at University of Dhaka</p>
+    </div>
+  </header>
+  
+  <div class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Hello everyone! I am Lokman Sharif, currently pursuing my undergraduate degree at the University of Dhaka. 
+        I'm passionate about technology and web development. This portfolio website showcases my skills, projects, 
+        and experiences. I built this webpage as a hobby and will continue to update it in the future.
+      </p>
+    </section>
+    
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill-tag">HTML</span>
+        <span class="skill-tag">CSS</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">Web Development</span>
+        <span class="skill-tag">Problem Solving</span>
+        <!-- Add more skills as needed -->
+      </div>
+    </section>
+    
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A personal portfolio website built with HTML and CSS to showcase my skills and projects.</p>
+          <p><a href="#">View Project</a></p>
+        </div>
+        <div class="project-card">
+          <h3>Project 2</h3>
+          <p>Description of your second project goes here.</p>
+          <p><a href="#">View Project</a></p>
+        </div>
+        <div class="project-card">
+          <h3>Project 3</h3>
+          <p>Description of your third project goes here.</p>
+          <p><a href="#">View Project</a></p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="education">
+      <h2>Education</h2>
+      <div>
+        <h3>University of Dhaka</h3>
+        <p>Undergraduate Student</p>
+        <p>Expected Graduation: [2026]</p>
+      </div>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>GitHub:</strong>
+          <a href="https://github.com/NAF1S" target="_blank">github.com/NAF1S</a>
+        </div>
+        <div class="contact-item">
+          <strong>Email:</strong>
+          <a href="mailto:lokmansharif000@gmail.com">lokmansharif000@gmail.com</a>
+        </div>
+        <!-- Add more contact methods as needed -->
+      </div>
+    </section>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Lokman Sharif. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
