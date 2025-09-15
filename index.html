@@ -1,205 +1,125 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lokman Sharif - Portfolio</title>
-  <style>
-    /* Embedded CSS */
-    body {
-      font-family: 'Arial', sans-serif;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0;
-      background-color: #f5f5f5;
-      color: #333;
-    }
-    
-    .container {
-      width: 80%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    
-    header {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 40px 0;
-      margin-bottom: 30px;
-    }
-    
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    
-    .subtitle {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      font-weight: normal;
-    }
-    
-    section {
-      background-color: white;
-      border-radius: 5px;
-      padding: 20px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #3498db;
-      padding-bottom: 10px;
-      margin-top: 0;
-    }
-    
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    
-    .skill-tag {
-      background-color: #3498db;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 3px;
-      font-size: 0.9rem;
-    }
-    
-    .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 20px;
-    }
-    
-    .project-card {
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      padding: 15px;
-      transition: transform 0.3s ease;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .contact-info {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
-    
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    
-    a {
-      color: #3498db;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    
-    a:hover {
-      color: #2980b9;
-      text-decoration: underline;
-    }
-    
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #2c3e50;
-      color: white;
-      margin-top: 30px;
-    }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lokman Sharif — Portfolio</title>
+  <meta name="description" content="Portfolio of Lokman Sharif — projects, skills, and blog.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
     <div class="container">
-      <h1>Lokman Sharif</h1>
-      <p class="subtitle">Undergraduate Student at University of Dhaka</p>
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="Homepage">LS</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <ul id="primary-nav" class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero" id="home" aria-labelledby="intro-title">
+        <h1 id="intro-title">Lokman Sharif</h1>
+        <p class="subtitle">Undergraduate, University of Dhaka</p>
+        <p class="lead">I build simple, fast web experiences.</p>
+      </section>
     </div>
   </header>
-  
-  <div class="container">
-    <section id="about">
-      <h2>About Me</h2>
+
+  <main id="main" class="container">
+    <section id="about" class="section">
+      <h2>About</h2>
       <p>
-        Hello everyone! I am Lokman Sharif, currently pursuing my undergraduate degree at the University of Dhaka. 
-        I'm passionate about technology and web development. This portfolio website showcases my skills, projects, 
-        and experiences. I built this webpage as a hobby and will continue to update it in the future.
+        Hello! I’m Lokman Sharif, an undergraduate at the University of Dhaka. I’m passionate about technology and web development.
+        This site highlights my skills, projects, and writing.
       </p>
     </section>
-    
-    <section id="skills">
+
+    <section id="skills" class="section">
       <h2>Skills</h2>
-      <div class="skills">
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">CSS</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">Web Development</span>
-        <span class="skill-tag">Problem Solving</span>
-        <!-- Add more skills as needed -->
-      </div>
+      <ul class="tags" aria-label="Skills">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Web Development</li>
+        <li>Problem Solving</li>
+      </ul>
     </section>
-    
-    <section id="projects">
+
+    <section id="projects" class="section">
       <h2>Projects</h2>
-      <div class="projects">
-        <div class="project-card">
+      <div class="grid">
+        <article class="card">
           <h3>Portfolio Website</h3>
-          <p>A personal portfolio website built with HTML and CSS to showcase my skills and projects.</p>
-          <p><a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
+          <p>A simple, fast portfolio built with semantic HTML and modern CSS.</p>
+          <p><a class="button" href="#" aria-label="View Portfolio Website project">View project</a></p>
+        </article>
+        <article class="card">
           <h3>Project 2</h3>
-          <p>Description of your second project goes here.</p>
-          <p><a href="#">View Project</a></p>
-        </div>
-        <div class="project-card">
+          <p>Brief description of your second project.</p>
+          <p><a class="button" href="#">View project</a></p>
+        </article>
+        <article class="card">
           <h3>Project 3</h3>
-          <p>Description of your third project goes here.</p>
-          <p><a href="#">View Project</a></p>
-        </div>
+          <p>Brief description of your third project.</p>
+          <p><a class="button" href="#">View project</a></p>
+        </article>
       </div>
     </section>
-    
-    <section id="education">
+
+    <section id="blog" class="section">
+      <h2>Blog</h2>
+      <p>Read my posts on the blog page.</p>
+      <p><a class="button" href="blog.html">Go to Blog →</a></p>
+    </section>
+
+    <section id="education" class="section">
       <h2>Education</h2>
       <div>
         <h3>University of Dhaka</h3>
         <p>Undergraduate Student</p>
-        <p>Expected Graduation: [2026]</p>
+        <p>Expected Graduation: 2026</p>
       </div>
     </section>
-    
-    <section id="contact">
-      <h2>Contact Information</h2>
-      <div class="contact-info">
-        <div class="contact-item">
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <ul class="contact-list">
+        <li>
           <strong>GitHub:</strong>
-          <a href="https://github.com/NAF1S" target="_blank">github.com/NAF1S</a>
-        </div>
-        <div class="contact-item">
+          <a href="https://github.com/NAF1S" target="_blank" rel="noopener">github.com/NAF1S</a>
+        </li>
+        <li>
           <strong>Email:</strong>
           <a href="mailto:lokmansharif000@gmail.com">lokmansharif000@gmail.com</a>
-        </div>
-        <!-- Add more contact methods as needed -->
-      </div>
+        </li>
+      </ul>
     </section>
-  </div>
-  
-  <footer>
+  </main>
+
+  <footer class="site-footer">
     <div class="container">
-      <p>&copy; 2023 Lokman Sharif. All rights reserved.</p>
+      <p>© 2025 Lokman Sharif</p>
     </div>
   </footer>
+
+  <script>
+    // Accessible mobile nav toggle without any frameworks
+    const btn = document.querySelector('.nav-toggle');
+    const list = document.getElementById('primary-nav');
+    if (btn && list) {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        list.classList.toggle('open');
+      });
+    }
+  </script>
 </body>
 </html>

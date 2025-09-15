@@ -1,4 +1,7 @@
-
 theme: jekyll-theme-minimal
-title: My homepage
-description: Bookmark this to keep an eye on my project updates!
+title: Lokman Sharif
+description: Portfolio, projects, and blog.
+markdown: kramdown
+plugins:
+	- jekyll-feed
+	- jekyll-seo-tag

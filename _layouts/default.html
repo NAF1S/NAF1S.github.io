@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="{{ '/' | relative_url }}">LS</a>
+        <ul class="nav-list">
+          <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+          <li><a href="{{ '/' | relative_url }}#skills">Skills</a></li>
+          <li><a href="{{ '/' | relative_url }}#projects">Projects</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  {{ content }}
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+    </div>
+  </footer>
+</body>
+</html>
