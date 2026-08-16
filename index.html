@@ -6,8 +6,9 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 <main id="main" class="container">
   <!-- Hero -->
   <section class="hero" aria-labelledby="hero-title">
+    <span class="status-pill"><span class="status-dot" aria-hidden="true"></span> Open to internships &amp; collaboration</span>
     <p class="hero-eyebrow">Hi, I'm</p>
-    <h1 id="hero-title">Lokman Sharif</h1>
+    <h1 id="hero-title">Lokman <span class="gradient-text">Sharif</span></h1>
     <p class="subtitle">Backend Developer · Competitive Programmer</p>
     <p class="lead">Self-taught programmer in Dhaka, Bangladesh. I build backend systems from first principles — a Redis clone, a custom web framework, and scalable APIs.</p>
     <div class="hero-actions">
@@ -18,7 +19,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- About -->
   <section id="about" class="section">
-    <h2>About</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Who I am</span>
+      <h2>About</h2>
+    </div>
     <p>
       I'm a self-taught programmer with a strong competitive programming background, including a
       <strong>top-1,300 global ranking in Meta Hacker Cup 2025</strong> and national inter-university contest experience.
@@ -29,7 +33,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- Skills -->
   <section id="skills" class="section">
-    <h2>Skills</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">What I use</span>
+      <h2>Skills</h2>
+    </div>
     <div class="skill-groups">
       <div class="skill-group">
         <h3>Languages</h3>
@@ -60,7 +67,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- Projects -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">What I've built</span>
+      <h2>Projects</h2>
+    </div>
     <div class="grid">
       <article class="card">
         <h3>CollabNote</h3>
@@ -82,7 +92,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- Achievements -->
   <section id="achievements" class="section">
-    <h2>Achievements</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Milestones</span>
+      <h2>Achievements</h2>
+    </div>
     <ul class="achievement-list">
       <li><span class="achievement-title">Meta Hacker Cup 2025</span> — Ranked <strong>1,290th</strong> globally (Round 2).</li>
       <li><span class="achievement-title">DUET Inter-University Programming Contest</span> — <strong>50th</strong> out of 150+ teams.</li>
@@ -92,7 +105,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- Blog -->
   <section id="blog" class="section">
-    <h2>Latest Posts</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">From the blog</span>
+      <h2>Latest Posts</h2>
+    </div>
     {% assign recent_posts = site.posts | slice: 0, 3 %}
     {% if recent_posts.size > 0 %}
       <ul class="post-list">
@@ -112,7 +128,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- Education -->
   <section id="education" class="section">
-    <h2>Education</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Education</span>
+      <h2>Education</h2>
+    </div>
     <div class="card education-card">
       <h3>University of Dhaka</h3>
       <p class="muted">B.Sc. in Leather Engineering</p>
@@ -122,7 +141,10 @@ description: Portfolio of Lokman Sharif — backend developer and competitive pr
 
   <!-- Contact -->
   <section id="contact" class="section">
-    <h2>Contact</h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Get in touch</span>
+      <h2>Contact</h2>
+    </div>
     <p>Open to internships, collaborations, and interesting problems. Reach out anytime.</p>
     <ul class="contact-list">
       <li><span class="contact-label">Email</span><a href="mailto:lokmansharif000@gmail.com">lokmansharif000@gmail.com</a></li>
