@@ -1,125 +1,134 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lokman Sharif — Portfolio</title>
-  <meta name="description" content="Portfolio of Lokman Sharif — projects, skills, and blog.">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="index.html" aria-label="Homepage">LS</a>
-        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
-        <ul id="primary-nav" class="nav-list">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <section class="hero" id="home" aria-labelledby="intro-title">
-        <h1 id="intro-title">Lokman Sharif</h1>
-        <p class="subtitle">Undergraduate, University of Dhaka</p>
-        <p class="lead">I build simple, fast web experiences.</p>
-      </section>
+---
+layout: default
+title: Home
+description: Portfolio of Lokman Sharif — backend developer and competitive programmer based in Dhaka, Bangladesh.
+---
+<main id="main" class="container">
+  <!-- Hero -->
+  <section class="hero" aria-labelledby="hero-title">
+    <p class="hero-eyebrow">Hi, I'm</p>
+    <h1 id="hero-title">Lokman Sharif</h1>
+    <p class="subtitle">Backend Developer · Competitive Programmer</p>
+    <p class="lead">Self-taught programmer in Dhaka, Bangladesh. I build backend systems from first principles — a Redis clone, a custom web framework, and scalable APIs.</p>
+    <div class="hero-actions">
+      <a class="button" href="#projects">View Projects</a>
+      <a class="button button-ghost" href="#contact">Get in Touch</a>
     </div>
-  </header>
+  </section>
 
-  <main id="main" class="container">
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        Hello! I’m Lokman Sharif, an undergraduate at the University of Dhaka. I’m passionate about technology and web development.
-        This site highlights my skills, projects, and writing.
-      </p>
-    </section>
+  <!-- About -->
+  <section id="about" class="section">
+    <h2>About</h2>
+    <p>
+      I'm a self-taught programmer with a strong competitive programming background, including a
+      <strong>top-1,300 global ranking in Meta Hacker Cup 2025</strong> and national inter-university contest experience.
+      I like building backend systems from first principles and work across the modern backend stack —
+      FastAPI, PostgreSQL, MongoDB, Kafka, and Docker — along with emerging AI tooling like RAG and agentic systems.
+    </p>
+  </section>
 
-    <section id="skills" class="section">
-      <h2>Skills</h2>
-      <ul class="tags" aria-label="Skills">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Web Development</li>
-        <li>Problem Solving</li>
-      </ul>
-    </section>
-
-    <section id="projects" class="section">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Portfolio Website</h3>
-          <p>A simple, fast portfolio built with semantic HTML and modern CSS.</p>
-          <p><a class="button" href="#" aria-label="View Portfolio Website project">View project</a></p>
-        </article>
-        <article class="card">
-          <h3>Project 2</h3>
-          <p>Brief description of your second project.</p>
-          <p><a class="button" href="#">View project</a></p>
-        </article>
-        <article class="card">
-          <h3>Project 3</h3>
-          <p>Brief description of your third project.</p>
-          <p><a class="button" href="#">View project</a></p>
-        </article>
+  <!-- Skills -->
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <ul class="tags"><li>Python</li><li>C++</li></ul>
       </div>
-    </section>
-
-    <section id="blog" class="section">
-      <h2>Blog</h2>
-      <p>Read my posts on the blog page.</p>
-      <p><a class="button" href="blog.html">Go to Blog →</a></p>
-    </section>
-
-    <section id="education" class="section">
-      <h2>Education</h2>
-      <div>
-        <h3>University of Dhaka</h3>
-        <p>Undergraduate Student</p>
-        <p>Expected Graduation: 2026</p>
+      <div class="skill-group">
+        <h3>Frameworks</h3>
+        <ul class="tags"><li>FastAPI</li></ul>
       </div>
-    </section>
-
-    <section id="contact" class="section">
-      <h2>Contact</h2>
-      <ul class="contact-list">
-        <li>
-          <strong>GitHub:</strong>
-          <a href="https://github.com/NAF1S" target="_blank" rel="noopener">github.com/NAF1S</a>
-        </li>
-        <li>
-          <strong>Email:</strong>
-          <a href="mailto:lokmansharif000@gmail.com">lokmansharif000@gmail.com</a>
-        </li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Lokman Sharif</p>
+      <div class="skill-group">
+        <h3>Databases</h3>
+        <ul class="tags"><li>PostgreSQL</li><li>MongoDB</li><li>Redis</li><li>Elasticsearch</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Infrastructure &amp; DevOps</h3>
+        <ul class="tags"><li>Docker</li><li>AWS (EC2)</li><li>CI/CD</li><li>Linux Networking</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>Messaging &amp; APIs</h3>
+        <ul class="tags"><li>Kafka</li><li>GraphQL</li><li>JWT Authentication</li></ul>
+      </div>
+      <div class="skill-group">
+        <h3>AI / ML</h3>
+        <ul class="tags"><li>RAG</li><li>Agentic Systems</li></ul>
+      </div>
     </div>
-  </footer>
+  </section>
 
-  <script>
-    // Accessible mobile nav toggle without any frameworks
-    const btn = document.querySelector('.nav-toggle');
-    const list = document.getElementById('primary-nav');
-    if (btn && list) {
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        btn.setAttribute('aria-expanded', String(!expanded));
-        list.classList.toggle('open');
-      });
-    }
-  </script>
-</body>
-</html>
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="grid">
+      <article class="card">
+        <h3>CollabNote</h3>
+        <p>Scalable backend for a collaborative note-taking app, built for horizontal scalability with clean API layering and production persistence patterns.</p>
+        <p><a class="button" href="https://github.com/NAF1S/CollabNote" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+      <article class="card">
+        <h3>Redis-from-Python</h3>
+        <p>A Redis server clone built from scratch in Python, including the core data structures and the RESP wire protocol.</p>
+        <p><a class="button" href="https://github.com/NAF1S/redisfrompython" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+      <article class="card">
+        <h3>PoridhiFrame</h3>
+        <p>A custom Python web framework built from the ground up — routing and request/response handling without magic.</p>
+        <p><a class="button" href="https://github.com/NAF1S/PoridhiFrame" target="_blank" rel="noopener">View on GitHub</a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Achievements -->
+  <section id="achievements" class="section">
+    <h2>Achievements</h2>
+    <ul class="achievement-list">
+      <li><span class="achievement-title">Meta Hacker Cup 2025</span> — Ranked <strong>1,290th</strong> globally (Round 2).</li>
+      <li><span class="achievement-title">DUET Inter-University Programming Contest</span> — <strong>50th</strong> out of 150+ teams.</li>
+      <li><span class="achievement-title">Codeforces</span> — Rated <strong>Pupil</strong> · <a href="https://codeforces.com/profile/NAF15" target="_blank" rel="noopener">profile</a></li>
+    </ul>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="section">
+    <h2>Latest Posts</h2>
+    {% assign recent_posts = site.posts | slice: 0, 3 %}
+    {% if recent_posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in recent_posts %}
+          <li class="card post-item">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p class="muted post-date">{{ post.date | date: "%B %d, %Y" }}</p>
+            {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+      <p><a class="button button-ghost" href="{{ '/blog.html' | relative_url }}">All posts →</a></p>
+    {% else %}
+      <p class="muted">No posts yet — coming soon.</p>
+    {% endif %}
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section">
+    <h2>Education</h2>
+    <div class="card education-card">
+      <h3>University of Dhaka</h3>
+      <p class="muted">B.Sc. in Leather Engineering</p>
+      <p class="muted">Expected graduation: 2027</p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Open to internships, collaborations, and interesting problems. Reach out anytime.</p>
+    <ul class="contact-list">
+      <li><span class="contact-label">Email</span><a href="mailto:lokmansharif000@gmail.com">lokmansharif000@gmail.com</a></li>
+      <li><span class="contact-label">GitHub</span><a href="https://github.com/NAF1S" target="_blank" rel="noopener">github.com/NAF1S</a></li>
+      <li><span class="contact-label">Codeforces</span><a href="https://codeforces.com/profile/NAF15" target="_blank" rel="noopener">codeforces.com/profile/NAF15</a></li>
+      <li><span class="contact-label">Location</span>Dhaka, Bangladesh</li>
+    </ul>
+  </section>
+</main>

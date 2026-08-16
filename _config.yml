@@ -1,7 +1,31 @@
-theme: jekyll-theme-minimal
+# Site settings
 title: Lokman Sharif
-description: Portfolio, projects, and blog.
+description: >-
+  Backend developer and competitive programmer based in Dhaka, Bangladesh.
+  Portfolio, projects, and blog.
+author: Lokman Sharif
+
+# Build settings
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# GitHub Pages plugins (whitelisted automatically on GitHub Pages)
 plugins:
-	- jekyll-feed
-	- jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Social profile links (used by jekyll-seo-tag for rich results)
+social:
+  name: Lokman Sharif
+  links:
+    - https://github.com/NAF1S
+    - https://codeforces.com/profile/NAF15
+
+# Keep non-site files out of the published site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - "*.pdf"
+  - remote

@@ -1,0 +1,16 @@
+# Jekyll build output
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Local development
+Gemfile.lock
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Personal files not meant for the public site
+*.pdf

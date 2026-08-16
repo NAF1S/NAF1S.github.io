@@ -1,39 +1,26 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Blog — Lokman Sharif</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="description" content="Blog posts by Lokman Sharif.">
-</head>
-<body>
-  <header class="site-header">
-    <div class="container">
-      <nav class="nav" aria-label="Primary">
-        <a class="brand" href="index.html">LS</a>
-        <ul class="nav-list">
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#skills">Skills</a></li>
-          <li><a href="index.html#projects">Projects</a></li>
-          <li><a href="blog.html" aria-current="page">Blog</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+---
+layout: default
+title: Blog
+description: Blog posts by Lokman Sharif — notes on backend engineering, competitive programming, and things I'm learning.
+---
+<main id="main" class="container">
+  <section class="section">
+    <h1>Blog</h1>
+    <p class="muted">Notes on backend engineering, competitive programming, and what I'm learning along the way.</p>
 
-  <main class="container">
-    <section class="section">
-      <h1>Blog</h1>
-      <p class="muted">No posts yet. Add your first post in the _posts folder if you use Jekyll, or create a new HTML/Markdown page and link it here.</p>
-    </section>
-  </main>
+    {% if site.posts.size > 0 %}
+      <ul class="post-list">
+        {% for post in site.posts %}
+          <li class="card post-item">
+            <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+            <p class="post-meta muted"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+            {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="muted">No posts yet. Add your first post to the <code>_posts</code> folder and it will appear here automatically.</p>
+    {% endif %}
+  </section>
+</main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© 2025 Lokman Sharif</p>
-    </div>
-  </footer>
-</body>
-</html>

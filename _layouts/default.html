@@ -3,20 +3,25 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  {%- seo -%}
+  <title>{% if page.title and page.title != 'Home' %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
+  {% seo %}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} — Feed" href="{{ '/feed.xml' | relative_url }}">
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <header class="site-header">
     <div class="container">
       <nav class="nav" aria-label="Primary">
-        <a class="brand" href="{{ '/' | relative_url }}">LS</a>
-        <ul class="nav-list">
+        <a class="brand" href="{{ '/' | relative_url }}" aria-label="Homepage">LS</a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <ul id="primary-nav" class="nav-list">
           <li><a href="{{ '/' | relative_url }}#about">About</a></li>
           <li><a href="{{ '/' | relative_url }}#skills">Skills</a></li>
           <li><a href="{{ '/' | relative_url }}#projects">Projects</a></li>
-          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+          <li><a href="{{ '/blog.html' | relative_url }}">Blog</a></li>
           <li><a href="{{ '/' | relative_url }}#contact">Contact</a></li>
         </ul>
       </nav>
@@ -27,8 +32,27 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p>© {{ 'now' | date: '%Y' }} {{ site.title }}</p>
+      <p>© {{ 'now' | date: '%Y' }} {{ site.author | default: site.title }} · Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> on GitHub Pages</p>
     </div>
   </footer>
+
+  <script>
+    // Lightweight, accessible mobile nav toggle (no frameworks)
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var list = document.getElementById('primary-nav');
+      if (!btn || !list) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        list.classList.toggle('open');
+      });
+      // Close the menu when a link is clicked
+      list.addEventListener('click', function () {
+        btn.setAttribute('aria-expanded', 'false');
+        list.classList.remove('open');
+      });
+    })();
+  </script>
 </body>
 </html>
